@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -31,4 +32,7 @@ public class Personnel {
 
     @CreatedDate
     private Date createdDate;
+
+    @OneToMany(mappedBy = "personnel")
+    private Collection<Affectation> affectations;
 }

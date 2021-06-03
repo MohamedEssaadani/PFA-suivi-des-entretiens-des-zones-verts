@@ -9,4 +9,5 @@ public interface IDbInitService {
     public void initTypeZoneVert();
     public void initZoneVerts();
     public void initPersonnels();
+    public void initTaches();
 }

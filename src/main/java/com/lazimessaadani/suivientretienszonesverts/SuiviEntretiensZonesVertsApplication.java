@@ -21,5 +21,6 @@ public class SuiviEntretiensZonesVertsApplication implements CommandLineRunner {
         dbInitService.initTypeZoneVert();
         dbInitService.initZoneVerts();
         dbInitService.initPersonnels();
+        dbInitService.initTaches();
     }
 }
