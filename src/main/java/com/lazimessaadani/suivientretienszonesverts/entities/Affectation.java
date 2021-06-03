@@ -22,9 +22,9 @@ public class Affectation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@ManyToOne
-	private Personnel Personnel;
+	private Personnel personnel;
 	@ManyToOne
-	private Tache Tache;
+	private Tache tache;
 
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")

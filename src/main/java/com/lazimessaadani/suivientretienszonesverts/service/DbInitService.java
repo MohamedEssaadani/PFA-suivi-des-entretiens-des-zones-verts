@@ -42,8 +42,6 @@ public class DbInitService implements IDbInitService {
 					Tache tache = new Tache();
 					tache.setNom(name);
 					tache.setDescription("Description: " + name);
-					tache.setDateRealisation(new Date());
-					tache.setEffectué(false);
 
 					tacheRepository.save(tache);
 				});
