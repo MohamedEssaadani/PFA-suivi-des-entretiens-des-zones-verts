@@ -2,6 +2,7 @@ package com.lazimessaadani.suivientretienszonesverts;
 
 import com.lazimessaadani.suivientretienszonesverts.entities.Personnel;
 import com.lazimessaadani.suivientretienszonesverts.entities.Tache;
+import com.lazimessaadani.suivientretienszonesverts.entities.TypeZoneVert;
 import com.lazimessaadani.suivientretienszonesverts.service.IDbInitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -34,6 +35,8 @@ public class SuiviEntretiensZonesVertsApplication implements CommandLineRunner, 
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         config.exposeIdsFor(Personnel.class);
         config.exposeIdsFor(Tache.class);
+        config.exposeIdsFor(TypeZoneVert.class);
+
     }
 
 }

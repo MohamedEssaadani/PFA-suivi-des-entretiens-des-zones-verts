@@ -61,19 +61,17 @@ public class DbInitService implements IDbInitService {
 
 	@Override
 	public void initZoneVerts() {
-		typeZoneVertRepository.findAll().forEach(typeZoneVert -> {
 			Stream.of("PARC DE LA LIGUE ARABE", "PARC DE LA PALESTINE", "PARC CASA NEARSHORE", "PARC IFRIQUIA",
 					"PARC ARCHÉOLOGIQUE DE SIDI ABDERRAHMANE").forEach(name -> {
 						ZoneVert zoneVert = new ZoneVert();
 						zoneVert.setNom(name);
-						zoneVert.setTypeZone(typeZoneVert);
+						zoneVert.setTypeZone(typeZoneVertRepository.findById(1L).get());
 						zoneVert.setAnneeDemarage(2021);
 						zoneVert.setSurface(69.800);
 						zoneVert.setVille("Casablanca");
 						zoneVert.setCreatedDate(new Date());
 						zoneVertRepository.save(zoneVert);
 					});
-		});
 	}
 
 	@Override
